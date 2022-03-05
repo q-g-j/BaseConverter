@@ -1,0 +1,142 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+        xmlns:ia="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
+        x:Class="BaseConverterAvalonia.Views.ConverterView"
+        xmlns:vm="using:BaseConverterAvalonia.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Icon="/Assets/converter.ico"
+        Title="Base Converter"
+        SizeToContent="WidthAndHeight"
+        CanResize="false">
+
+	<Design.DataContext>
+		<vm:ConverterViewModel/>
+	</Design.DataContext>
+
+	<Window.Styles>
+		<Style Selector="Label">
+			<Setter Property="Grid.Column" Value="1"/>
+			<Setter Property="HorizontalAlignment" Value="Left"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="Margin" Value="0 0 10 10"/>
+			<Setter Property="Padding" Value="3 3 3 3"/>
+			<Setter Property="FontFamily" Value="/Assets/Fonts/selawk.ttf#Selawik"/>
+		</Style>
+		<Style Selector="TextBox">
+			<Setter Property="Grid.Column" Value="2"/>
+			<Setter Property="HorizontalAlignment" Value="Left"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="Width" Value="600"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="Margin" Value="0 0 0 10"/>
+			<Setter Property="Padding" Value="3 3 3 3"/>
+			<Setter Property="FontFamily" Value="/Assets/Fonts/JetBrainsMono-Regular.ttf#JetBrains Mono"/>
+		</Style>
+	</Window.Styles>
+	<StackPanel>
+		<Label
+                FontFamily="/Assets/Fonts/BowlbyOne-Regular.otf#Bowlby One"
+                FontSize="30"
+                Foreground="DodgerBlue"
+                Margin="0, 0, 0, 0"
+                HorizontalAlignment="Center"
+                Content="Base Converter" VerticalAlignment="Center" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            />
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="20"/>
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="20" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="10" />
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto" />
+				<RowDefinition Height="auto" />
+				<RowDefinition Height="auto" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="20" />
+			</Grid.RowDefinitions>
+
+			<Label
+            Grid.Row="1"
+            Content="Dezimalzahl:"
+        />
+			<TextBox
+            Grid.Row="1"
+		    Text="{Binding DecimalNumber}"
+        >
+				<i:Interaction.Behaviors>
+					<ia:EventTriggerBehavior  EventName="GotFocus">
+						<ia:InvokeCommandAction Command="{Binding TBGotFocusCommand}" CommandParameter="TBDecimal"/>
+					</ia:EventTriggerBehavior >
+					<ia:EventTriggerBehavior  EventName="LostFocus">
+						<ia:InvokeCommandAction Command="{Binding TBLostFocusCommand}" CommandParameter="TBDecimal" />
+					</ia:EventTriggerBehavior >
+				</i:Interaction.Behaviors>
+			</TextBox>
+			<Label
+            Grid.Row="2"
+            Content="Binärzahl:"
+        />
+			<TextBox
+            Grid.Row="2"
+            Text="{Binding BinaryNumber}"
+        >
+				<i:Interaction.Behaviors>
+					<ia:EventTriggerBehavior  EventName="GotFocus">
+						<ia:InvokeCommandAction Command="{Binding TBGotFocusCommand}" CommandParameter="TBBinary"/>
+					</ia:EventTriggerBehavior >
+					<ia:EventTriggerBehavior  EventName="LostFocus">
+						<ia:InvokeCommandAction Command="{Binding TBLostFocusCommand}" CommandParameter="TBBinary" />
+					</ia:EventTriggerBehavior >
+				</i:Interaction.Behaviors>
+			</TextBox>
+			<Label
+            Grid.Row="3"
+            Content="Oktalzahl:"
+        />
+			<TextBox
+            Grid.Row="3"
+            Text="{Binding OctalNumber}"
+        >
+				<i:Interaction.Behaviors>
+					<ia:EventTriggerBehavior  EventName="GotFocus">
+						<ia:InvokeCommandAction Command="{Binding TBGotFocusCommand}" CommandParameter="TBOctal"/>
+					</ia:EventTriggerBehavior >
+					<ia:EventTriggerBehavior  EventName="LostFocus">
+						<ia:InvokeCommandAction Command="{Binding TBLostFocusCommand}" CommandParameter="TBOctal" />
+					</ia:EventTriggerBehavior >
+				</i:Interaction.Behaviors>
+			</TextBox>
+			<Label
+            Grid.Row="4"
+            Margin="0 0 10 0"
+            Content="Hexadezimalzahl:"
+        />
+			<TextBox
+            Grid.Row="4"
+            Margin="0 0 0 0"
+            Text="{Binding HexadecimalNumber}"
+        >
+				<i:Interaction.Behaviors>
+					<ia:EventTriggerBehavior  EventName="GotFocus">
+						<ia:InvokeCommandAction Command="{Binding TBGotFocusCommand}" CommandParameter="TBHexadecimal"/>
+					</ia:EventTriggerBehavior >
+					<ia:EventTriggerBehavior  EventName="LostFocus">
+						<ia:InvokeCommandAction Command="{Binding TBLostFocusCommand}" CommandParameter="TBHexadecimal" />
+					</ia:EventTriggerBehavior >
+				</i:Interaction.Behaviors>
+			</TextBox>
+		</Grid>
+	</StackPanel>
+</Window>
+    

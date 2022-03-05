@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:BaseConverterXamarinForms.ViewModels"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="BaseConverterXamarinForms.Views.ConverterView">
+
+    <ContentPage.BindingContext>
+        <vm:ConverterViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout >
+                <Label
+                    FontFamily="Title"
+                    FontSize="30"
+                    TextColor="DodgerBlue"
+                    Margin="0, 25, 0, 10"
+                    HorizontalOptions="Center"
+                    Text="Base Converter"
+                    Rotation="-5"
+                />
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="Grid.Column" Value="1"/>
+                            <Setter Property="Margin" Value="0"/>
+                            <Setter Property="FontSize" Value="15"/>
+                            <Setter Property="FontAttributes" Value="Bold"/>
+                            <Setter Property="FontFamily" Value="Main"/>
+                        </Style>
+                        <Style TargetType="Entry">
+                            <Setter Property="Grid.Column" Value="1"/>
+                            <Setter Property="Margin" Value="0, 0, 0, 15"/>
+                            <Setter Property="FontSize" Value="15"/>
+                            <Setter Property="FontFamily" Value="Block"/>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="0" />
+                        <RowDefinition Height="5" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="1"
+                        Text="Dezimalzahl:"
+                    />
+                    <Entry
+                        Grid.Row="2"
+                        Text="{Binding DecimalNumber}"
+                    >
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="Focused"
+                                Command="{Binding TBGotFocusCommand}"
+                                CommandParameter="TBDecimal">
+                            </xct:EventToCommandBehavior>
+                            <xct:EventToCommandBehavior
+                                EventName="Unfocused"
+                                Command="{Binding TBLostFocusCommand}"
+                                CommandParameter="TBDecimal">
+                            </xct:EventToCommandBehavior>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Label
+                        Grid.Row="3"
+                        Text="Binärzahl:"
+                    />
+                    <Entry
+                        Grid.Row="4"
+                        Text="{Binding BinaryNumber}"
+                    >
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="Focused"
+                                Command="{Binding TBGotFocusCommand}"
+                                CommandParameter="TBBinary">
+                            </xct:EventToCommandBehavior>
+                            <xct:EventToCommandBehavior
+                                EventName="Unfocused"
+                                Command="{Binding TBLostFocusCommand}"
+                                CommandParameter="TBBinary">
+                            </xct:EventToCommandBehavior>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Label
+                        Grid.Row="5"
+                        Text="Oktalzahl:"
+                    />
+                    <Entry
+                        Grid.Row="6"
+                        Text="{Binding OctalNumber}"
+                    >
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="Focused"
+                                Command="{Binding TBGotFocusCommand}"
+                                CommandParameter="TBOctal">
+                            </xct:EventToCommandBehavior>
+                            <xct:EventToCommandBehavior
+                                EventName="Unfocused"
+                                Command="{Binding TBLostFocusCommand}"
+                                CommandParameter="TBOctal">
+                            </xct:EventToCommandBehavior>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Label
+                        Grid.Row="7"
+                        Text="Hexadezimalzahl:"
+                    />
+                    <Entry
+                        Grid.Row="8"
+                        Margin="0, 0, 0, 0"
+                        Text="{Binding HexadecimalNumber}"
+                    >
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="Focused"
+                                Command="{Binding TBGotFocusCommand}"
+                                CommandParameter="TBHexadecimal">
+                            </xct:EventToCommandBehavior>
+                            <xct:EventToCommandBehavior
+                                EventName="Unfocused"
+                                Command="{Binding TBLostFocusCommand}"
+                                CommandParameter="TBHexadecimal">
+                            </xct:EventToCommandBehavior>
+                        </Entry.Behaviors>
+                    </Entry>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
