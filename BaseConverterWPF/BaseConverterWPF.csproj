@@ -77,7 +77,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>E538BC9BAC5A0F40D8F5F1FE72E36D057DDBC3CA</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>C35B80E7A0E32C2109057E057D7BA0D8A12E6B73</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>BaseConverterWPF_TemporaryKey.pfx</ManifestKeyFile>
