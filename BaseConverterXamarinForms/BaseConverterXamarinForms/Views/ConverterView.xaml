@@ -16,7 +16,7 @@
                     FontFamily="Title"
                     FontSize="30"
                     TextColor="DodgerBlue"
-                    Margin="0, 25, 0, 10"
+                    Margin="0, 35, 0, 20"
                     HorizontalOptions="Center"
                     Text="Base Converter"
                     Rotation="-5"

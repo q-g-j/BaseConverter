@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -77,10 +77,10 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C35B80E7A0E32C2109057E057D7BA0D8A12E6B73</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>BE52E8F7368D54177B7CC1AD7E41D571F6C8BB4B</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>BaseConverterWPF_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>BaseConverterWPF_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -144,6 +144,7 @@
     <Resource Include="Assets\Fonts\BowlbyOne-Regular.otf" />
     <Resource Include="Assets\Fonts\JetBrainsMono-Regular.ttf" />
     <Resource Include="Assets\Fonts\selawk.ttf" />
+    <None Include="BaseConverterWPF_1_TemporaryKey.pfx" />
     <None Include="BaseConverterWPF_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
