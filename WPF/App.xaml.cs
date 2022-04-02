@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace BaseConverterWPF
+namespace BaseConverter
 {
     /// <summary>
     /// Interaction logic for App.xaml

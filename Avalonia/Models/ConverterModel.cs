@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Numerics;
 
-namespace BaseConverterAvalonia.Models
+namespace BaseConverter.Models
 {
     internal class ConverterModel
     {

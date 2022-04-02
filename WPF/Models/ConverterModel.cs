@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Numerics;
 
-namespace BaseConverterWPF.Models
+namespace BaseConverter.Models
 {
     internal class ConverterModel
     {

@@ -2,7 +2,7 @@ using ReactiveUI;
 using Avalonia.Input;
 using System.Reactive;
 
-namespace BaseConverterAvalonia.ViewModels
+namespace BaseConverter.ViewModels
 {
     public class ConverterViewModel : ReactiveObject
     {

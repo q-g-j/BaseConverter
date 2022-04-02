@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace BaseConverterWPF.Views
+namespace BaseConverter.Views
 {
     public partial class ConverterView : Window
     {

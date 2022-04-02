@@ -6,7 +6,7 @@
     <AssemblyName>BaseConverter</AssemblyName>
     <RootNamespace>BaseConverter</RootNamespace>
     <ApplicationIcon>Assets/converter.ico</ApplicationIcon>
-    <Configurations>Debug;Release;123</Configurations>
+    <Configurations>Debug;Release;123;macOS</Configurations>
     <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
         <ItemGroup>
@@ -19,9 +19,5 @@
         <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.13" />
         <PackageReference Include="Avalonia.Xaml.Behaviors" Version="0.10.13.2" />
   </ItemGroup>
-    <ItemGroup>
-      <Compile Update="Views\ConverterView.axaml.cs">
-        <DependentUpon>ConverterView.axaml</DependentUpon>
-      </Compile>
-    </ItemGroup>
+
 </Project>

@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <AssemblyName>$(MSBuildProjectName)</AssemblyName>
-    <Configurations>Debug;Release;123</Configurations>
+    <Configurations>Debug;Release;123;macOS</Configurations>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 

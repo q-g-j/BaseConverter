@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
-namespace BaseConverterWPF.ViewModels
+namespace BaseConverter.ViewModels
 {
     public class ConverterViewModel : INotifyPropertyChanged
     {

@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace BaseConverterAvalonia.Views
+namespace BaseConverter.Views
 {
     public partial class ConverterView : Window
     {

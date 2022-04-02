@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using BaseConverterAvalonia.ViewModels;
-using BaseConverterAvalonia.Views;
+using BaseConverter.ViewModels;
+using BaseConverter.Views;
 
-namespace BaseConverterAvalonia
+namespace BaseConverter
 {
     public class App : Application
     {
