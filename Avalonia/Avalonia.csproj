@@ -6,8 +6,8 @@
     <AssemblyName>BaseConverter</AssemblyName>
     <RootNamespace>BaseConverter</RootNamespace>
     <ApplicationIcon>Assets/converter.ico</ApplicationIcon>
-    <Configurations>Debug;Release;123;macOS</Configurations>
-    <Platforms>AnyCPU;x64</Platforms>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
     </PropertyGroup>
         <ItemGroup>
 	        <AvaloniaResource Include="Assets/**" />
